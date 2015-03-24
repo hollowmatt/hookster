@@ -12,6 +12,7 @@ gem "hashie"
 
 group :development do
   gem "sinatra-reloader"
+  gem "better_errors"
 end
 
 group :test do
