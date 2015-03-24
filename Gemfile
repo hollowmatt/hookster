@@ -13,6 +13,7 @@ gem "hashie"
 group :development do
   gem "sinatra-reloader"
   gem "better_errors"
+  gem "pry-byebug"
 end
 
 group :test do
