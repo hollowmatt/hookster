@@ -19,7 +19,10 @@ Once you have the repository, then run bundle install to get the gems you need, 
 `````
 thin -R config.ru start -p 8080
 `````
-
+There are two controllers in the app currently:
+ - ApplicationController: (this is the index route /), just returns a 418 status (I'm a teapot)
+ - RepudiationController: (/repudiator/badger -> POST), this is the honeybadger sample (takes a post of a JSON object with at least {"event":"<value>", "message":"<message>"}).  This stores the two elements in the mongo collection, and also you can take action on it.
+ 
 ## Dependencies
  - Sinatra (of course)
  - Ruby 2.1.5
