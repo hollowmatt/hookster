@@ -1,4 +1,4 @@
 development:
   mongodb:
-    hosts: [localhost:27017]
+    host: 'localhost'
     database: 'hookster'

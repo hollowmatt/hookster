@@ -9,6 +9,7 @@ gem "thin"
 gem "json"
 gem "mongo_mapper"
 gem "hashie"
+gem 'bson_ext'
 
 group :development do
   gem "sinatra-reloader"

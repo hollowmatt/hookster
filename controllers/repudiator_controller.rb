@@ -1,3 +1,6 @@
+require 'pry-byebug'
+require 'json'
+
 class RepudiatorController < ApplicationController
 
   post '/badger' do
