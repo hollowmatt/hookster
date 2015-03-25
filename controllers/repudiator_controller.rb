@@ -7,7 +7,13 @@ class RepudiatorController < ApplicationController
     status 204
     request.body.rewind
     request_payload = JSON.parse(request.body.read)
-    puts request_payload
+    @badger = BadgerMonitor.new(:event => request_payload["event"], :message => request_payload["message"])
+    @badger.save
+    if @badger.event == "down"
+      puts "do something interesting"
+    else
+      puts "we're live people"
+    end
   end
 
 end
