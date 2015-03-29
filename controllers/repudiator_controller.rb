@@ -1,7 +1,12 @@
 require 'pry-byebug'
 require 'json'
+require 'haml'
 
 class RepudiatorController < ApplicationController
+
+  get '/' do
+    haml :index
+  end
 
   post '/badger' do
     status 204
