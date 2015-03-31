@@ -6,3 +6,21 @@
     %h1 Repudiator: HoneyBadger integration
     %p
       This is quick sample application.  It will take a 'uptime alert' from HoneyBadger, and log it into MongoDB
+    %table
+      -@events.each do |event|
+        %tr
+          %th
+            %label
+              Event:
+          %td
+            =event.event
+          %th
+            %label
+              Message:
+          %td
+            =event.message
+          %th
+            %label
+              Time:
+          %td
+            =event.created_at

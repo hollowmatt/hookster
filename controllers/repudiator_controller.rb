@@ -5,6 +5,7 @@ require 'haml'
 class RepudiatorController < ApplicationController
 
   get '/' do
+    @events = BadgerMonitor.all
     haml :index
   end
 
