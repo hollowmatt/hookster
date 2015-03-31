@@ -21,6 +21,7 @@ GEM
     builder (3.2.2)
     byebug (4.0.3)
       columnize (= 0.9.0)
+    chartkick (1.3.2)
     coderay (1.1.0)
     columnize (0.9.0)
     daemons (1.2.2)
@@ -99,6 +100,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bson_ext
+  chartkick
   haml
   hashie
   json

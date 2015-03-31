@@ -10,6 +10,7 @@ gem "json"
 gem "mongo_mapper"
 gem "hashie"
 gem 'bson_ext'
+gem 'chartkick'
 
 group :development do
   gem "sinatra-reloader"
