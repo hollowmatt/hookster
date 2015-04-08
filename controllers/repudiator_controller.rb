@@ -12,9 +12,9 @@ require 'mongo'
 
 class RepudiatorController < Sinatra::Application
 
-  set :static, true
+  # set :static, true
   set :views, File.expand_path('../../views', __FILE__)
-  set :public_folder, 'public'
+  # set :public_folder, 'public'
 
   configure :development do
     enable :logging

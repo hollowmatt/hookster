@@ -9,3 +9,4 @@ Dir["./models/**/*.rb"].each { |model| require model }
 use Rack::Static, :urls => ['/css', '/js', '/img', '/fonts'], :root => 'public'
 
 map('/') { run RepudiatorController }
+map('/repudiator') { run RepudiatorController }
