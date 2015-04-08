@@ -9,6 +9,7 @@ require "hashie"
 require 'mongo'
 
 class ServiceBaseApp < Sinatra::Base
+
   configure :development do
     register Sinatra::Reloader  #reload after changes
     use BetterErrors::Middleware
@@ -16,8 +17,6 @@ class ServiceBaseApp < Sinatra::Base
   end
 
   configure do
-    set :public_folder => 'public'
-
     db_config = YAML.load_file("config/database.yml")
     host = db_config[settings.environment.to_s]['mongodb']['host']
     database = db_config[settings.environment.to_s]['mongodb']['database']
